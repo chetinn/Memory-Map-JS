@@ -1,0 +1,188 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 1440px;
+    height: 830px;
+    display: flex;
+    flex-direction: row;
+}
+
+.left-container::-webkit-scrollbar {
+    display: none;
+}
+
+.left-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    background: rgb(34, 193, 195);
+    background: linear-gradient(
+        0deg,
+        rgba(34, 193, 195, 1) 0%,
+        rgba(253, 187, 45, 1) 100%
+    );
+    width: 35%;
+    max-height: fit-content;
+    overflow-y: scroll;
+}
+
+h1 {
+    color: white;
+    position: relative;
+    top: 40%;
+    text-align: center;
+}
+
+.memory-container {
+    width: 100%;
+    max-height: fit-content;
+    min-height: 400px;
+}
+
+.memory-div::-webkit-scrollbar {
+    display: none;
+}
+.memory-div {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    width: 90%;
+    max-height: 100px;
+    min-height: 60px;
+    background: rgba(255, 213, 0, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.6px);
+    -webkit-backdrop-filter: blur(3.6px);
+    border: 1px solid rgba(255, 213, 0, 0.19);
+    margin: 20px;
+    word-wrap: break-word;
+    overflow: scroll;
+    display: flex;
+    flex-direction: row;
+}
+
+.memory-div:hover {
+    background: rgba(152, 128, 6, 0.08);
+    border: 2px solid white;
+}
+
+.paragraph-left {
+    display: flex;
+    width: 72%;
+    color: white;
+    text-align: center;
+    font-size: x-large;
+    justify-content: center;
+    flex-direction: row;
+    margin: 14px;
+    word-break: break-word;
+}
+.fa-sharp {
+    display: flex;
+    font-size: 40px;
+    color: white;
+    margin: 10px;
+    width: 30px;
+    justify-content: center;
+    position: sticky;
+}
+
+#trash {
+    display: flex;
+    margin-top: 15px;
+    font-size: x-large;
+    color: white;
+}
+#trash:hover {
+    color: rgb(211, 211, 211);
+}
+
+.popup {
+    width: 1048px;
+    height: 830px;
+    position: absolute;
+    left: 392px;
+    background: rgb(2, 233, 237);
+    background: linear-gradient(
+        0deg,
+        rgb(0, 251, 255) 0%,
+        rgb(244, 172, 18) 100%
+    );
+    opacity: 90%;
+    z-index: 1;
+    display: none;
+}
+
+.popup input {
+    width: 600px;
+    height: 150px;
+    border-radius: 10px;
+    position: relative;
+    left: 240px;
+    top: 280px;
+    border: 2px solid #ffffff;
+    background-color: #fdbb2d;
+    color: white;
+}
+
+.popup h1 {
+    display: inline-block;
+    left: 160px;
+    font-size: 40px;
+    color: white;
+    top: 20%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 100%;
+}
+
+.add-memory-button {
+    width: 220px;
+    height: 40px;
+    position: absolute;
+    bottom: 200px;
+    left: 420px;
+    background-color: rgba(253, 187, 45, 1);
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.popup button:hover {
+    background-color: rgb(247, 168, 0);
+    border: 2px solid white;
+}
+.popup button:active {
+    background-color: rgb(194, 132, 0);
+    border: 2px solid white;
+}
+
+.close-popup {
+    color: white;
+    font-size: 40px;
+    position: relative;
+    left: 990px;
+    top: 40px;
+}
+.close-popup:hover {
+    color: rgb(210, 210, 210);
+    font-size: 40px;
+    position: relative;
+    left: 990px;
+    top: 40px;
+}
+#map {
+    width: 80%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    z-index: 0;
+}
