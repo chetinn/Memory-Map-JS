@@ -1,16 +1,14 @@
-* {
+html body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100vw;
+    height: 100vh;
     margin: 0px;
     padding: 0px;
 }
 
-body {
-    overflow: hidden;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 .container {
-    width: 1440px;
-    height: 830px;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: row;
 }
@@ -29,11 +27,13 @@ body {
         rgba(253, 187, 45, 1) 100%
     );
     width: 35%;
+    height: 100%;
     max-height: fit-content;
     overflow-y: scroll;
 }
 
 h1 {
+    font-size: 2vw;
     color: white;
     position: relative;
     top: 40%;
@@ -105,10 +105,10 @@ h1 {
 }
 
 .popup {
-    width: 1048px;
-    height: 830px;
-    position: absolute;
-    left: 392px;
+    width: 79vw;
+    height: 100vh;
+    position: fixed;
+    left: 30%;
     background: rgb(2, 233, 237);
     background: linear-gradient(
         0deg,
@@ -169,15 +169,13 @@ h1 {
     color: white;
     font-size: 40px;
     position: relative;
-    left: 990px;
+    left: 940px;
     top: 40px;
 }
 .close-popup:hover {
     color: rgb(210, 210, 210);
     font-size: 40px;
     position: relative;
-    left: 990px;
-    top: 40px;
 }
 #map {
     width: 80%;
@@ -185,4 +183,136 @@ h1 {
     margin: 0px;
     padding: 0px;
     z-index: 0;
+}
+
+/* PHONE RESPONSIVE */
+@media (max-width: 420px) {
+    html body {
+        overflow: hidden;
+        height: 100vh;
+        width: 100vw;
+    }
+    .container {
+        z-index: 0;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #map {
+        z-index: 0;
+        display: flex;
+        height: 50%;
+        width: 420px;
+        overflow: hidden;
+    }
+    .left-container {
+        display: flex;
+        overflow: scroll;
+        height: 50%;
+        width: 100%;
+    }
+
+    .info-left-h1 {
+        font-size: 10vw;
+        position: relative;
+        left: 20%;
+        top: 100px;
+        height: 10px;
+    }
+
+    .popup {
+        display: none;
+        position: fixed;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        flex-direction: column;
+    }
+
+    .close-popup {
+        font-size: 30px;
+        margin-left: 100px;
+        left: 60%;
+    }
+
+    .popup h1 {
+        left: 0px;
+        width: 100%;
+        font-size: 10vw;
+    }
+
+    .popup input {
+        position: relative;
+        left: 0px;
+        top: 200px;
+        width: 100%;
+    }
+
+    .add-memory-button {
+        position: relative;
+        left: 100px;
+        top: 40%;
+    }
+
+    .memory-container {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* TABLET RESPONSIVE */
+
+@media (min-device-width: 540px) and (max-device-width: 1024px) {
+    html body {
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+    }
+
+    .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .left-container {
+        width: 100%;
+        height: 50%;
+    }
+
+    .info-left-h1 {
+        font-size: 5vw;
+    }
+
+    .popup {
+        width: 100%;
+        height: 100%;
+        left: 0px;
+    }
+
+    .popup h1 {
+        font-size: 6vw;
+        left: 0px;
+    }
+
+    .popup input {
+        left: 12%;
+    }
+    .add-memory-button {
+        left: 36%;
+    }
+
+    .close-popup {
+        font-size: 60px;
+        left: 90%;
+    }
+    #map {
+        width: 100%;
+        height: 50%;
+    }
 }
